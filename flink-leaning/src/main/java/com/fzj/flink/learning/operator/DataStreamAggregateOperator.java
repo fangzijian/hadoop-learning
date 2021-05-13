@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Summary:
  *     Aggregate: min()、minBy()、max()、maxBy() 滚动聚合并输出每次滚动聚合后的结果
  */
-public class DataStreamAggregateOperator {
+class DataStreamAggregateOperator {
     public static void main(String[] args) throws Exception{
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
