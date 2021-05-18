@@ -59,4 +59,15 @@ public class UserAction {
     public void setProduce(String produce) {
         this.produce = produce;
     }
+
+    @Override
+    public String toString() {
+        return "UserAction{" +
+                "userId='" + userId + '\'' +
+                ", date=" + date +
+                ", action='" + action + '\'' +
+                ", produce='" + produce + '\'' +
+                ", time=" + time +
+                '}';
+    }
 }

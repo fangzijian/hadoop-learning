@@ -44,13 +44,6 @@ public class DataStreamReduceOperator {
         });
 
         // 输出: 将每次滚动聚合后的结果输出到控制台。
-        //3> UserAction(userID=userID2, eventTime=1293984001, eventType=browse, productID=productID2, productPrice=8)
-        //3> UserAction(userID=userID2, eventTime=-1, eventType=, productID=, productPrice=16)
-        //3> UserAction(userID=userID2, eventTime=-1, eventType=, productID=, productPrice=24)
-        //4> UserAction(userID=userID1, eventTime=1293984000, eventType=click, productID=productID1, productPrice=10)
-        //4> UserAction(userID=userID1, eventTime=-1, eventType=, productID=, productPrice=20)
-        //4> UserAction(userID=userID1, eventTime=-1, eventType=, productID=, productPrice=30)
-        //4> UserAction(userID=userID1, eventTime=-1, eventType=, productID=, productPrice=40)
         result.print();
 
         env.execute();
