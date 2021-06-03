@@ -65,7 +65,7 @@ hive 和 hbase的区别
 不严格的ps：
 
     hive可以认为是map-reduce的一个包装。hive的意义就是把好写的hive的sql转换为复杂难写的map-reduce程序。
-    hbase可以认为是hdfs的一个包装。他的本质是数据存储，是个NoSql数据库；hbase部署于hdfs之上，并且克服了hdfs在随机读写方面的缺点。
+    hbase可以认为是hdfs的一个包装。他的本质是数据存储，是个NoSql数据库；hbase依赖并部署于hdfs之上，并且克服了hdfs在随机读写方面的缺点。
 
 hive不是数据库，只是由于SQL被广泛的应用在数据仓库中，因此，专门针对Hive的特性设计了类SQL的查询语言HQL。
 
