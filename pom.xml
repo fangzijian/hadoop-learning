@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>flink-learning</module>
+        <module>spark-learning</module>
     </modules>
 
 
@@ -19,15 +20,28 @@
         <scala.binary.version>2.11</scala.binary.version>
         <maven.compiler.version>3.2</maven.compiler.version>
         <maven.assembly.version>3.2.0</maven.assembly.version>
-        <flink.version>1.12.2</flink.version>
-        <flink.shaded.hadoop.version>3.1.1.7.2.1.0-327-9.0</flink.shaded.hadoop.version>
         <slf4j.version>1.7.7</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
+        <httpclinet.version>4.5.10</httpclinet.version>
+        <!-- middleware -->
+        <druid.version>1.2.3</druid.version>
+        <clickhouse.jdbc.verion>0.2.4</clickhouse.jdbc.verion>
+        <clickhouse4j.version>1.4.4</clickhouse4j.version>
+        <jedis.version>2.9.0-OPEXT-RELEASE-1</jedis.version>
+        <kafka.version>2.3.1</kafka.version>
+        <hadoop.version>2.6.5</hadoop.version>
+        <hive.version>1.1.0-cdh5.14.4</hive.version>
+        <zkclient.version>0.10</zkclient.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
+        <spark.version>2.4.0</spark.version>
+        <flink.version>1.12.2</flink.version>
+        <flink.shaded.hadoop.version>3.1.1.7.2.1.0-327-9.0</flink.shaded.hadoop.version>
         <mysql.jdbc.version>5.1.46</mysql.jdbc.version>
         <sqlserver.jdbc.version>4.0</sqlserver.jdbc.version>
         <oracle.jdbc.version>10.2.0.4.0</oracle.jdbc.version>
         <postgre.jdbc.verion>42.2.11</postgre.jdbc.verion>
         <hive.version>3.1.2</hive.version>
+
         <protobuf.version>3.3.0</protobuf.version>
         <grpc.version>1.6.1</grpc.version>
     </properties>
@@ -120,6 +134,11 @@
                 <artifactId>hive-exec</artifactId>
                 <version>${hive.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.hive</groupId>
+                <artifactId>hive-jdbc</artifactId>
+                <version>${hive.version}</version>
+            </dependency>
             <!-- db drivers -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -140,6 +159,43 @@
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgre.jdbc.verion}</version>
+            </dependency>
+
+            <!-- httpclient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclinet.version}</version>
+            </dependency>
+            <!-- hadoop -->
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-client</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-common</artifactId>
+                <version>${hadoop.version}</version>
+            </dependency>
+            <!--spark-->
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_${scala.binary.version}</artifactId>
+                <version>${spark.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-hive_${scala.binary.version}</artifactId>
+                <version>${spark.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!--jedis-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

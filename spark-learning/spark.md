@@ -1,6 +1,6 @@
 # Spark
 
-![图片](src/main/resources/img/spark.png)
+![图片](../src/main/resources/img/spark.png)
 
 成员：
 
@@ -21,7 +21,7 @@
 
 2、RDD 的操作函数(operation)主要分为2种类型 Transformation 和 Action.
 
-![图片](src/main/resources/img/rdd.png)
+![图片](../src/main/resources/img/rdd.png)
 
 Transformation 操作不是马上提交 Spark 集群执行的, Transformation 操作时只会记录操作,并不会去执行,需要等到有 Action 操作才会计算，生产一个job。所有的操作生成一个有向无环图DAG。
 
@@ -37,7 +37,7 @@ Job=多个stage，Stage=多个同种task, Task分为ShuffleMapTask和ResultTask
 
 RDD 读取文件：
 
-![图片](src/main/resources/img/rdd2.png)
+![图片](../src/main/resources/img/rdd2.png)
 
     当Spark读取这些文件作为输入时，会根据具体数据格式对应的InputFormat进行解析，一般是将若干个Block合并成一个输入分片，称为	InputSplit	，注意InputSplit不能跨越文件。
     
@@ -55,10 +55,10 @@ Task被执行的并发度 = Executor数目 * 每个Executor核数（=core总个�
 
 RDD的每个元素是partition，分布在不同的机器中
 
-![图片](src/main/resources/img/rddPartition.png)
+![图片](../src/main/resources/img/rddPartition.png)
 
 
 ps:批处理、流处理框架：
 
-![图片](src/main/resources/img/data.png)
+![图片](../src/main/resources/img/data.png)
 
