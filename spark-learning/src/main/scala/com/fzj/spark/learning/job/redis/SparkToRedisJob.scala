@@ -1,6 +1,6 @@
-package com.fzj.spark.learning.job
+package com.fzj.spark.learning.job.redis
 
-import com.fzj.spark.learning.`case`.DOMAIN
+import com.fzj.spark.learning.cases.Domain
 import com.fzj.spark.learning.util.{RedisUtil, SparkUtil}
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.roaringbitmap.buffer.{ImmutableRoaringBitmap, MutableRoaringBitmap}
@@ -58,7 +58,7 @@ object SparkToRedisJob {
     val spark = SparkUtil.initSparkSession(
       Array(classOf[ImmutableRoaringBitmap],
         classOf[MutableRoaringBitmap],
-        classOf[DOMAIN]),
+        classOf[Domain]),
       enableCrossJoin = true)
     new SparkToRedisJob(spark).work()
   }
