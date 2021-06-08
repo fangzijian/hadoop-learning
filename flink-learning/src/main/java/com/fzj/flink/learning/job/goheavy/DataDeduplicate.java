@@ -1,4 +1,4 @@
-//package com.fzj.flink.learning.goheavy;
+//package com.fzj.flink.learning.job.goheavy;
 //
 //import com.fzj.flink.learning.domain.UserAction;
 //import org.apache.flink.api.common.eventtime.SerializableTimestampAssigner;

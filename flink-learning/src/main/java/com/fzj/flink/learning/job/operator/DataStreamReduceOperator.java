@@ -1,4 +1,4 @@
-package com.fzj.flink.learning.operator;
+package com.fzj.flink.learning.job.operator;
 
 import com.fzj.flink.learning.domain.UserAction;
 import org.apache.flink.api.common.functions.ReduceFunction;

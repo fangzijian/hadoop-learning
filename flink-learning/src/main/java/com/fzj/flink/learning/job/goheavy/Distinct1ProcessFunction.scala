@@ -1,6 +1,7 @@
-package com.fzj.flink.learning.goheavy
+package com.fzj.flink.learning.job.goheavy
 
 import com.fzj.flink.learning.domain.{AdData, AdKey}
+import com.fzj.flink.learning.domain.AdData
 import org.apache.flink.api.common.state.{MapState, MapStateDescriptor, ValueState, ValueStateDescriptor}
 import org.apache.flink.api.common.typeinfo.TypeInformation
 import org.apache.flink.configuration.Configuration
